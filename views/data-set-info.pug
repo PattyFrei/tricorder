@@ -1,0 +1,60 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/bulma.css')
+    link(rel='stylesheet', href='/stylesheets/dygraph.css')
+    script(src='/javascripts/dygraph.min.js')
+    script(src='/javascripts/graph.js')
+  body
+    .top
+      .tri= title
+    .navbar 
+      ul
+        li.white &#60;
+        li
+          a.white(href="/data-set" target="_self" ) Zurück
+    .desc Alle Informationen zum gewählten Datensatz mit der ID #{dataSetID}.
+
+    .content    
+      section.get
+        h3.white Datensatz herunterladen 
+        .sub-desc 
+          a.button.is-link(href="/data-set-info/download/"+`${dataSetID}`) Download CSV
+
+      section.get
+        h3.white Messwertkurven
+        .sub-desc 
+          button.button.is-primary(onclick=`getChart('${setValues}','${dataSetID}')`) Lade Diagramm
+        .graphbg
+          #graphdiv2
+        .graphbg
+          #graphdiv3
+
+    .list2
+      section.get
+        h3.white Messwerte des Datensatzes    
+        if setValues
+          table
+            thead
+                tr
+                  th Daten-ID
+                  th Temperatur
+                  th Luftfeuchtigkeit
+                  th Luftdruck
+                  th Neigung x-Achse
+                  th Neigung y-Achse
+                  th Zeitpunkt der Messung
+
+                  each setRow in setValues.setValues
+                    tr
+                      td #{setRow.id}
+                      td #{setRow.temperature} °C
+                      td #{setRow.humidity} %
+                      td #{setRow.air_pressure} hPA
+                      td #{setRow.device_tilt_x}
+                      td #{setRow.device_tilt_y}
+                      td #{setRow.time_stamp}

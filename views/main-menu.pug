@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/bulma.css')
+    script(src='/javascripts/tricorder.js')
+    script(src='/javascripts/measure.js')
+  body
+    .top
+      .tri= title
+  .navbar 
+    ul
+      li.white /
+  .desc Wählen Sie eine Funktion aus. Mit "Auftrag anlegen" können Messdaten in der Datenbank gespeichert werden. "Datensätze" zeigt alle gespeicherten Messwerte an.
+  p.main 
+    a.btn-primary.btn3d(href="/record" target="_self" ) Auftrag anlegen
+    a.btn-primary.btn3d(href="/data-set" target="_self" ) Datensätze

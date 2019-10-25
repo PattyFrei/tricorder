@@ -1,0 +1,42 @@
+extends layout
+
+block content
+  .navbar 
+    ul
+      li.white &#60;
+      li
+        a.white(href="/main-menu" target="_self" ) Zurück
+  .desc Wählen Sie einen gewünschten Datensatz aus um mehr Informationen zu erhalten.
+
+  .list2
+    section.get
+      h3.white Liste aller Datensätze
+      a.button.is-link(href="/get-data-sets") Datensätze anzeigen
+      
+      if dataSetList
+        table
+          thead
+              tr
+                th Details
+                th Auftrags-ID
+                th Startdatum
+                th Enddatum
+                th Messdaten
+
+                each dataSet in dataSetList.dataSetList
+                  tr
+                    td
+                        a.button.is-link(href="/data-set-info/"+`${dataSet.id}`) Klick
+
+                    td #{dataSet.id}
+                    td #{dataSet.start_date}
+                    td #{dataSet.end_date}
+                    td
+                      if dataSet.temperature
+                        li Temperatur
+                      if dataSet.humidity
+                        li Luftfeuchtigkeit
+                      if dataSet.air_pressure
+                        li Luftdruck
+                      if dataSet.device_tilt
+                        li Neigung
