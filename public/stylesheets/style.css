@@ -1,8 +1,261 @@
+/* general style */
+html {
+  height: 100%;
+  background: linear-gradient(90deg, #58aa87 0%, #1fc8db 40%, #2cb5e8 65%, #2c77e8 95%);
+}
+
+html, body {
+  /*height: 100%; */
+  padding: 0;
+  margin: 0;
+  font-family: "Segoe UI", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+  color: #363636;
+}
+
 body {
+  background: linear-gradient(90deg, #58aa87 0%, #1fc8db 40%, #2cb5e8 65%, #2c77e8 95%);
+  background-repeat: no-repeat;
+}
+
+/* top border */
+.top {
+  width: 100%;
+  height: 70px;
+  background: #4390c496;
+  box-shadow: 0 4px 10px #223b47a2; /* 1px 2px 6px #ffffff inset; */
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  color: white;
+  font-size: 19px;
+  font-weight: 600;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.tri {
+  padding: 20px 30px;
+}
+
+/* headline and navigation */
+h1 {
+  margin-left: 20px;
+}
+
+h3 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.white {
+  color: white;
+}
+
+.navbar {
+  margin-top: 5px;
+  font-size: 13px;
+  padding-right: 20px;
+  font-family: "Segoe UI", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+li {
+  list-style-type: none;
+  display: inline-block;
+  padding-right: 8px;
+}
+
+.desc {
+  margin: 20px;
+  padding-left: 20px;
+  font-family: "Segoe UI", Georgia, 'Times New Roman', Times, serif;
+  font-size: 15px;
+  padding-bottom: 0;
+}
+
+.sub-desc {
+  margin: 20px;
+  font-family: "Segoe UI", Georgia, 'Times New Roman', Times, serif;
+  font-size: 15px;
+  padding-bottom: 0;
+}
+
+/* page content */
+p {
+  padding: 15px 0 15px 0;
+}
+
+.main {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding-bottom: 0;
 }
 
 a {
-  color: #00B7FF;
+  color: #b1e0ff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a.white:hover {
+	text-decoration: underline;
+}
+
+a.bigger {
+  font-size: 15px;
+}
+
+/* dygraph canvas */
+.graphbg {
+  width: 1050px; 
+  height: 420px; 
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  margin-bottom: 40px;
+}
+
+#graphdiv2, #graphdiv3 {
+  width: 900px; 
+  height: 300px;
+  padding: 30px;
+}
+
+/* record page content */
+.content {
+  margin: 20px;
+  padding-left: 20px;
+  font-size: 16px;
+  padding-bottom: 0;
+  display: block;
+}
+
+.insert, .update, .delete {
+  display: inline-block;
+  float: left;
+  margin-right: 50px;
+  padding: 0 30px 25px 30px;
+  background-color: rgba(0, 0, 0, 0.336); /* rgba(255, 255, 255, 0.336); */
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+	color: #fff;
+}
+
+form {
+  font-size: 15px;
+}
+
+label {
+  padding-left: 7px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.list2 {
+  margin: 20px;
+  padding-left: 20px;
+  font-size: 16px;
+  padding-bottom: 0;
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.get {
+  margin-top: 30px;
+}
+
+table {
+  margin-top: 20px;
+  font-size: 14px;
+  border-collapse: collapse;
+	overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+th, td {
+  padding: 15px;
+	background-color: rgba(0, 0, 0, 0.2); /* rgba(255,255,255,0.2); */
+	color: #fff;
+}
+
+th {
+  font-size: 16px;
+}
+
+thead tr th {
+	background-color: #4390c4;
+}
+
+tr:hover {
+	background-color: rgba(0, 0, 0, 0.3); /* rgba(255,255,255,0.3); */
+}
+
+/* button style (do not change!) */
+.btn3d {
+  cursor: pointer;
+  text-align: center;
+  padding: 24px 24px;
+  line-height: 1.5;
+  border-radius: 4px;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+  color: #fcfff5;
+  font-size: 22px;
+  position: relative;
+  border: 0;
+  transition: all 40ms linear;
+  margin-top: 2px; 
+  margin-bottom: 12px; 
+  margin-left: 2px;
+  margin-right: 20px;
+  top: -6px; 
+}
+
+.mainbtn3d {
+  cursor: pointer;
+  text-align: center;
+  padding: 6px 12px;
+  line-height: 1.5;
+  border-radius: 4px;
+  text-decoration: none;
+  font-family: 'Arial';
+  font-weight: 600;
+  color: #fcfff5;
+  font-size: 16px;
+  position: relative;
+  border: 0;
+  transition: all 40ms linear;
+  margin-top: 2px;
+  margin-bottom: 12px;
+  margin-left: 2px;
+  margin-right: 4px;
+  top: -6px;
+}
+
+.btn3d:active:focus,
+.btn3d:focus:hover,
+.btn3d:focus,
+.mainbtn3d:active:focus,
+.mainbtn3d:focus:hover,
+.mainbtn3d:focus  {
+  outline: medium none;
+}
+
+.btn3d:active,
+.btn3d.active 
+.mainbtn3d:active,
+.mainbtn3d.active {
+  top: 2px;
+}
+
+.btn3d.btn-primary,
+.mainbtn3d.btn-primary {
+  box-shadow: 0 0 0 1px #1c3947 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #132a35, 0 8px 8px 1px rgba(0, 0, 0, 0.5);
+  background: #1e3d4d;
+}
+
+.btn3d.btn-primary:active,
+.btn3d.btn-primary.active,
+.mainbtn3d.btn-primary:active,
+.mainbtn3d.btn-primary.active {
+  box-shadow: 0 0 0 1px #224557 inset, 0 0 0 1px rgba(255, 255, 255, 0.15) inset, 0 1px 3px 1px rgba(0, 0, 0, 0.3);
+  background:  #1e3d4d;
 }
