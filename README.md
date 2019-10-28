@@ -18,3 +18,11 @@ A small web stack for a Raspberry Pi student project in the course computer syst
 * writing/reading/downloading files in/from the file system
 * rendering csv file data in a chart
 * basic understanding of JS template literals and promises
+
+### Screenshots:
+<p align="center">
+<img width="850" src="https://raw.githubusercontent.com/PattyFrei/tricorder/master/ressources/tricorder_orders.png">
+</p>
+<p align="center">
+<img width="850" src="https://raw.githubusercontent.com/PattyFrei/tricorder/master/ressources/tricorder_order_data.png">
+</p>
